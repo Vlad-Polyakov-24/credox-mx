@@ -1,0 +1,13 @@
+@use '@globals/styles/breakpoints';
+
+.logo {
+	display: block;
+	width: 100%;
+	max-width: 160px;
+
+	svg, path {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}

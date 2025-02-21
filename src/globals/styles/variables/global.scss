@@ -1,0 +1,90 @@
+@use '../breakpoints';
+
+:root {
+
+  // colors
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-blue-primary: #286DF7;
+
+  // shadows
+
+  --shadow-1: 0 8px 16px 0 rgba(0, 0, 70, .2);
+
+  // border radius
+
+  --primary-border-radius: 20px;
+
+  // transitions
+
+  --transition-primary: .2s ease;
+
+  // paddings
+
+  --card-padding: 40px;
+
+  // fonts
+
+  --font-size-xs: 10px;
+  --font-line-xs: 16px;
+
+  --font-size-s: 12px;
+  --font-line-s: 18px;
+
+  --font-size-m: 14px;
+  --font-line-m: 20px;
+
+  --font-size-ml: 18px;
+  --font-line-ml: 24px;
+
+  --font-size-l: 20px;
+  --font-line-l: 26px;
+
+  --font-size-xl: 30px;
+  --font-line-xl: 36px;
+
+  --font-size-xxl: 40px;
+  --font-line-xxl: 46px;
+
+  --font-size-xxxl: 50px;
+  --font-line-xxxl: 56px;
+
+  // container
+
+  --container-width: 1140px;
+  --container-gap: 20px;
+
+  // swiper
+
+  --swiper-pagination-bottom: 0;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-color: var(--color-gray-300);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-color: var(--color-gray-800);
+
+  // header
+
+  --header-height: 60px;
+
+  // mobile
+
+  @media (width < breakpoints.$md) {
+
+    // border radius
+
+    --primary-border-radius: 12px;
+
+    // paddings
+
+    --card-padding: 20px;
+
+    // container
+
+    --container-gap: 10px;
+
+    // header
+
+    --header-height: 50px;
+  }
+}
