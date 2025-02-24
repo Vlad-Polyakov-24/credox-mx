@@ -1,0 +1,22 @@
+.list {
+	display: flex;
+	align-items: center;
+
+	&--pc {
+		gap: 32px;
+	}
+	&--mobile {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__link {
+		color: var(--color-gray-400);
+
+		@media (hover: hover) {
+			&:hover {
+				color: var(--color-blue-primary);
+			}
+		}
+	}
+}

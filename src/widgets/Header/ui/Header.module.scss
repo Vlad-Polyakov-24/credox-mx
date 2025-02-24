@@ -1,12 +1,19 @@
+@use '@globals/styles/breakpoints';
+
 .header {
+	min-height: var(--header-height);
 	background-color: var(--color-white);
+	border-bottom: 1px solid rgba(81, 81, 81, .2);
+	overflow: hidden;
 
 	&__container {
 		display: flex;
 		align-items: center;
+		height: 100%;
 	}
 
 	&__inner {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -15,9 +22,32 @@
 		&:first-child {
 			flex-grow: 1;
 			padding-right: 20px;
+
+			@media (width < breakpoints.$lg) {
+				padding-right: 0;
+			}
 		}
 		&:last-child {
 			padding-left: 20px;
+
+			@media (width < breakpoints.$lg) {
+				display: none;
+				padding-left: 0;
+			}
+		}
+
+		+ .header__inner {
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				translate: 0 -50%;
+				width: 1px;
+				height: 100vh;
+				background-color: rgba(81, 81, 81, .2);
+			}
+			//border-left: 1px solid rgba(81, 81, 81, .2);
 		}
 	}
 }

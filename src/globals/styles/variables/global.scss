@@ -7,6 +7,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-blue-primary: #286DF7;
+  --color-gray-400: #515151;
 
   // shadows
 
@@ -14,7 +15,7 @@
 
   // border radius
 
-  --primary-border-radius: 20px;
+  --primary-border-radius: 24px;
 
   // transitions
 
@@ -65,19 +66,21 @@
 
   // header
 
-  --header-height: 60px;
+  --header-height: 100px;
+
+
+  // tablet
+
+  @media (width < breakpoints.$lg) {
+
+    // header
+
+    --header-height: 75px;
+  }
 
   // mobile
 
   @media (width < breakpoints.$md) {
-
-    // border radius
-
-    --primary-border-radius: 12px;
-
-    // paddings
-
-    --card-padding: 20px;
 
     // container
 

@@ -1,3 +1,22 @@
 .footer {
 	margin-top: auto;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background-color: var(--color-white);
+	border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-top: 32px;
+		padding-top: 16px;
+		border-top: 1px solid rgba(81, 81, 81, .2);
+	}
+
+	.text {
+		font-size: var(--font-size-s);
+		line-height: var(--font-line-s);
+		color: var(--color-gray-400);
+	}
 }

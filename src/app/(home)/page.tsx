@@ -1,11 +1,5 @@
-import styles from './home.module.scss';
+import PageHome from './ui/PageHome/PageHome';
 
-const Home = () => {
-	return (
-		<section className={styles.home}>
-			<h1>OLYA SHLYSHKA!</h1>
-		</section>
-	);
-}
+const Page = () => <PageHome />
 
-export default Home;
+export default Page;
