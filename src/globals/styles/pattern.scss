@@ -34,3 +34,23 @@
 .fw-700 {
   font-weight: 700;
 }
+
+// font style
+
+.font-italic {
+  font-style: italic;
+}
+
+// colors
+
+.color-blue-primary {
+  color: var(--color-blue-primary);
+}
+
+// titles
+
+.h1 {
+  font-size: var(--font-size-xxxl);
+  line-height: var(--font-line-xxxl);
+  font-weight: 700;
+}

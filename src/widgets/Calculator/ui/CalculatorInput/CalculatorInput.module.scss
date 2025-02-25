@@ -1,0 +1,17 @@
+@use '@globals/styles/breakpoints';
+
+.input {
+	display: grid;
+	gap: 15px;
+
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+
+		p {
+			color: var(--color-gray-400);
+		}
+	}
+}
