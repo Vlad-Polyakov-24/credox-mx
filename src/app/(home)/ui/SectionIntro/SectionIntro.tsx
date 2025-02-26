@@ -3,7 +3,7 @@ import { classNames } from '@shared/lib/classNames';
 import { Container } from '@shared/ui/Container';
 import { Calculator } from '@widgets/Calculator';
 import styles from './SectionIntro.module.scss';
-import IntroImg from '@shared/assets/images/intro/img_01.png';
+import IntroImg from '@shared/assets/images/home-page/img_01.png';
 
 type SectionIntroProps = {
 	className?: string;
@@ -17,10 +17,11 @@ const SectionIntro = ({ className }: SectionIntroProps) => (
 					<span className={'color-blue-primary font-italic'}>Soluciones</span> de crédito al instante
 				</h1>
 				<Image
-					className={'mt-24'}
+					className={styles.intro__image}
 					src={IntroImg}
 					alt={'intro img'}
-					width={400}
+					// width={400}
+					priority
 				/>
 			</div>
 			<div className={classNames(styles.intro__inner, {}, [styles.right])}>

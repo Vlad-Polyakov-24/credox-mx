@@ -1,0 +1,16 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.title {
+	font-size: var(--font-size-xxl);
+	line-height: var(--font-line-xxl);
+}
+
+.subtitle {
+	font-size: var(--font-size-ml);
+	line-height: var(--font-line-ml);
+	color: var(--color-gray-200);
+}

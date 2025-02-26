@@ -1,3 +1,98 @@
-.steps {
+@use '@globals/styles/breakpoints';
 
+.steps {
+	border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+	background-color: var(--color-white);
+
+	@media (width < breakpoints.$lg) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&__container {
+		display: flex;
+
+		@media (width < breakpoints.$lg) {
+      flex-direction: column;
+    }
+	}
+
+	&__inner {
+		padding-top: 140px;
+		padding-bottom: 140px;
+
+		@media (width < breakpoints.$lg) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		+ .steps__inner {
+			border-left: 1px solid var(--color-transparent-gray);
+
+			@media (width < breakpoints.$lg) {
+				border-left: none;
+			}
+		}
+
+		&.left {
+			width: 280px;
+			padding-right: 40px;
+
+			@media (width < breakpoints.$lg) {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+		&.right {
+			width: calc(100% - 280px);
+			padding-left: 80px;
+
+			@media (width < breakpoints.$lg) {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.slide {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	&.arrow {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			right: -30px;
+			width: 160px;
+			height: 24px;
+			background-image: url('/steps-arrow.svg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__counter {
+		font-size: var(--font-size-xxl);
+		line-height: var(--font-line-xxl);
+		font-weight: 700;
+		font-style: italic;
+		color: var(--color-blue-primary);
+	}
+
+	&__caption {
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+		font-weight: 700;
+	}
+
+	&__desc {
+		padding-top: 12px;
+		border-top: 1px solid var(--color-transparent-gray);
+		color: var(--color-gray-200y);
+	}
 }

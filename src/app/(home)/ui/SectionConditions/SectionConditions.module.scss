@@ -1,3 +1,43 @@
-.conditions {
+@use '@globals/styles/breakpoints';
 
+.conditions {
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	@media (width < breakpoints.$lg) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	@media (width < breakpoints.$md) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		row-gap: 20px;
+		column-gap: 72px;
+
+		@media (width < breakpoints.$lg) {
+			column-gap: 36px;
+    }
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+		color: var(--color-white);
+
+		@media (width < breakpoints.$lg) {
+			gap: 10px;
+			font-size: var(--font-size-m);
+			line-height: var(--font-line-m);
+		}
+	}
 }

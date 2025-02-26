@@ -53,4 +53,12 @@
   font-size: var(--font-size-xxxl);
   line-height: var(--font-line-xxxl);
   font-weight: 700;
+
+  @media (width < breakpoints.$lg) {
+    text-align: center;
+  }
+  @media (width < breakpoints.$md) {
+    font-size: var(--font-size-xxl);
+    line-height: var(--font-line-xxl);
+  }
 }

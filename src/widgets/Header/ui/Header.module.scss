@@ -1,10 +1,26 @@
 @use '@globals/styles/breakpoints';
 
 .header {
+	position: relative;
 	min-height: var(--header-height);
 	background-color: var(--color-white);
 	border-bottom: 1px solid var(--color-transparent-gray);
-	overflow: hidden;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		max-width: 340px;
+		height: 200px;
+		background-image: url('/header_bg.svg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 
 	&__container {
 		display: flex;
@@ -13,7 +29,7 @@
 	}
 
 	&__inner {
-		position: relative;
+		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -37,16 +53,7 @@
 		}
 
 		+ .header__inner {
-			&:before {
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 0;
-				translate: 0 -50%;
-				width: 1px;
-				height: 100vh;
-				background-color: var(--color-transparent-gray);
-			}
+			border-left: 1px solid var(--color-transparent-gray);
 		}
 	}
 }

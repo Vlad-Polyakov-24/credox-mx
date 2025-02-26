@@ -1,6 +1,8 @@
 @use '@globals/styles/breakpoints';
 
 .logo {
+	position: relative;
+	z-index: 1;
 	display: block;
 	width: 100%;
 	max-width: 160px;
