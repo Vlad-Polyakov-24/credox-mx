@@ -16,6 +16,7 @@ interface CustomSwiperProps extends SwiperProps {
 const CustomSwiper = ({ className, children, ...rest }: CustomSwiperProps) => (
 	<Swiper
 		modules={[Scrollbar, Autoplay]}
+		scrollbar={{ draggable: true, horizontalClass: styles.swiper__scrollbar }}
 		className={classNames(styles.swiper, {}, [className])}
 		{...rest}
 	>

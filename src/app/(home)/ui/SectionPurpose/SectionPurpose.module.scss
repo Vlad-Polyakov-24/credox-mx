@@ -1,3 +1,53 @@
-.purpose {
+@use '@globals/styles/breakpoints';
 
+.purpose {
+	position: relative;
+	border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
+	background-color: var(--color-white);
+
+	&__container {
+		display: flex;
+
+		@media (width < breakpoints.$lg) {
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+
+	&__inner {
+		padding-top: 140px;
+		padding-bottom: 140px;
+
+		@media (width < breakpoints.$lg) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		+ .purpose__inner {
+			border-left: 1px solid var(--color-transparent-gray);
+
+			@media (width < breakpoints.$lg) {
+				border-left: none;
+			}
+		}
+
+		&.left {
+			width: 280px;
+			padding-right: 40px;
+
+			@media (width < breakpoints.$lg) {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+		&.right {
+			width: calc(100% - 280px);
+			padding-left: 80px;
+
+			@media (width < breakpoints.$lg) {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
 }

@@ -24,6 +24,9 @@
 		@media (width < breakpoints.$lg) {
 			column-gap: 36px;
     }
+		@media (width < breakpoints.$sm) {
+			display: grid;
+    }
 	}
 
 	&__item {

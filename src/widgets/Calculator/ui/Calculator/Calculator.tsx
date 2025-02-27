@@ -38,9 +38,12 @@ const Calculator = ({ className }: CalculatorProps) => {
 			/>
 			<Button className={'m-centred'} text={'Envía tu solicitud'} fluid />
 			<ul className={styles.calculator__info}>
-				<li>Cantidad: <span className={'fw-700'}>${amount}</span></li>
-				<li>Tasa de interés: <span className={'fw-700'}>0%</span> <Icon icon={<InfoIcon/>} size={IconSize.SIZE_16} /></li>
-				<li>Cantidad a pagar: <span className={'fw-700'}>${amount}</span></li>
+				<li><p>Cantidad:</p> <p><span className={'fw-700'}>${amount}</span></p></li>
+				<li>
+					<p>Tasa de interés:</p>
+					<p><span className={'fw-700'}>0%</span> <Icon icon={<InfoIcon/>} size={IconSize.SIZE_16} /></p>
+				</li>
+				<li><p>Cantidad a pagar:</p> <p><span className={'fw-700'}>${amount}</span></p></li>
 			</ul>
 			<p className={styles.calculator__desc}>
 				<Icon icon={<InfoIcon/>} size={IconSize.SIZE_16} />

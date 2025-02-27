@@ -9,7 +9,7 @@ type SectionConditionsProps = {
 };
 
 const SectionConditions = ({ className }: SectionConditionsProps) => (
-	<section className={classNames(styles.conditions, {}, [className])}>
+	<div className={classNames(styles.conditions, {}, [className])}>
 		<Container>
 			<ul className={styles.conditions__list}>
 				{conditions.map(({ icon, text }, i) => (
@@ -20,7 +20,7 @@ const SectionConditions = ({ className }: SectionConditionsProps) => (
 				))}
 			</ul>
 		</Container>
-	</section>
+	</div>
 );
 
 export { SectionConditions };

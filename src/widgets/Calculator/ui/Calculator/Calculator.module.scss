@@ -13,33 +13,24 @@
 		display: flex;
 		align-items: center;
 
-		@media (width < breakpoints.$xs) {
-			flex-direction: column;
-      gap: 5px;
-		}
-
 		&-inner {
 			&:first-child {
 				padding-right: 20px;
 
-				@media (width < breakpoints.$xs) {
-					padding-right: 0;
+				@media (width < breakpoints.$md) {
+					padding-right: 12px;
 				}
 			}
 			&:last-child {
         padding-left: 20px;
 
-				@media (width < breakpoints.$xs) {
-					padding-left: 0;
+				@media (width < breakpoints.$md) {
+					padding-left: 12px;
 				}
       }
 
 			+ .calculator__heading-inner {
 				border-left: 1px solid var(--color-transparent-gray);
-
-				@media (width < breakpoints.$xs) {
-					border-left: none;
-				}
 			}
 		}
 	}
@@ -48,6 +39,11 @@
 		font-size: var(--font-size-xl);
 		line-height: var(--font-line-xl);
 		font-weight: 700;
+
+		@media (width < breakpoints.$md) {
+			font-size: var(--font-size-l);
+			line-height: var(--font-line-l);
+		}
 	}
 
 	&__amount {
@@ -55,6 +51,11 @@
 		line-height: var(--font-line-xl);
 		font-weight: 700;
 		color: var(--color-blue-primary);
+
+		@media (width < breakpoints.$md) {
+			font-size: var(--font-size-l);
+			line-height: var(--font-line-l);
+		}
 	}
 
 	&__info {
@@ -62,9 +63,8 @@
 		align-items: center;
 		justify-content: center;
 
-		@media (width < breakpoints.$sm) {
+		@media (width < breakpoints.$xs) {
 			flex-direction: column;
-			gap: 5px;
 		}
 
 		li {
@@ -79,15 +79,45 @@
 				padding-left: 10px;
 				padding-right: 10px;
 			}
+			@media (width < breakpoints.$md) {
+				font-size: var(--font-size-s);
+				line-height: var(--font-line-s);
+			}
 			@media (width < breakpoints.$sm) {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0;
+				padding: 0 10px;
+				text-align: left;
+			}
+			@media (width < breakpoints.$xs) {
+				flex-direction: row;
+				gap: 3px;
 				padding: 0;
 				border-left: none;
 			}
 
+			p {
+				display: flex;
+				align-items: center;
+				gap: 2px;
+
+				@media (width < breakpoints.$xs) {
+					padding: 0;
+				}
+			}
+
+			&:first-child {
+				@media (width < breakpoints.$sm) {
+					border-left: none;
+					padding-left: 0;
+				}
+      }
 			&:last-child {
 				border-right: 1px solid var(--color-transparent-gray);
 
 				@media (width < breakpoints.$sm) {
+					padding-right: 0;
 					border-right: none;
 				}
 			}
@@ -100,5 +130,9 @@
 		gap: 8px;
 		color: var(--color-gray-400);
 		font-weight: 700;
+
+		@media (width < breakpoints.$md) {
+			margin-top: 24px;
+		}
 	}
 }

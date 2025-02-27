@@ -4,10 +4,14 @@
 	position: relative;
 	background-color: var(--color-white);
 	border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
+	overflow-x: hidden;
 
 	@media (width < breakpoints.$lg) {
 		padding-top: 60px;
 		padding-bottom: 30px;
+	}
+	@media (width < breakpoints.$md) {
+		padding-top: 40px;
 	}
 
 	&:before {
@@ -23,7 +27,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 
-		@media (width < breakpoints.$md) {
+		@media (width < breakpoints.$lg) {
 			display: none;
 		}
 	}
@@ -38,7 +42,6 @@
 
 	&__inner {
 		position: relative;
-		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
@@ -49,12 +52,26 @@
 			padding-top: 0;
 			padding-bottom: 0;
 		}
+		@media (width < breakpoints.$md) {
+			gap: 16px;
+		}
 
 		+ .intro__inner {
 			border-left: 1px solid var(--color-transparent-gray);
 
 			@media (width < breakpoints.$lg) {
 				border-left: none;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 50%;
+					translate: -50% 0;
+					width: 100vw;
+					height: 1px;
+					background-color: var(--color-transparent-gray);
+				}
 			}
 		}
 
@@ -69,6 +86,7 @@
 			@media (width < breakpoints.$lg) {
 				width: 100%;
 				padding-right: 0;
+				padding-bottom: 40px;
 			}
 
 			&:before {
@@ -86,7 +104,15 @@
 				background-repeat: no-repeat;
 
 				@media (width < breakpoints.$lg) {
-					display: none;
+					z-index: unset;
+					right: -20px;
+					background-image: url('/intro_bg_mobile.svg');
+					width: 250px;
+					height: 250px;
+				}
+				@media (width < breakpoints.$md) {
+					width: 170px;
+					height: 170px;
 				}
 			}
 		}
@@ -98,6 +124,7 @@
 				padding-left: 30px;
 			}
 			@media (width < breakpoints.$lg) {
+				padding-top: 40px;
 				padding-left: 0;
 			}
 		}
@@ -107,9 +134,14 @@
 		padding-top: 32px;
 		border-top: 1px solid var(--color-transparent-gray);
 
+		@media (width < breakpoints.$md) {
+			padding-top: 16px;
+		}
+
 		.text {
 			font-size: var(--font-size-s);
 			line-height: var(--font-line-s);
+			color: var(--color-gray-200);
 		}
 	}
 
@@ -119,9 +151,15 @@
 		height: auto;
 
 		@media (width < breakpoints.$lg) {
+			position: absolute;
+			z-index: 2;
+			right: 20px;
+			bottom: -30px;
 			max-width: 300px;
-			margin-left: auto;
-			margin-right: auto;
+		}
+		@media (width < breakpoints.$md) {
+			right: -60px;
+			max-width: 200px;
 		}
 	}
 }

@@ -14,7 +14,7 @@ const SectionTitle = (props: SectionTitleProps) => {
 	return (
 		<div className={classNames(styles.wrapper, {}, [className])}>
 			{title && <h2 className={styles.title}>{title}</h2>}
-			{subtitle && <p className={styles.subtitile}>{subtitle}</p>}
+			{subtitle && <p className={styles.subtitle}>{subtitle}</p>}
 		</div>
 	);
 };

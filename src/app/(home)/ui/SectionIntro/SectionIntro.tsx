@@ -3,7 +3,7 @@ import { classNames } from '@shared/lib/classNames';
 import { Container } from '@shared/ui/Container';
 import { Calculator } from '@widgets/Calculator';
 import styles from './SectionIntro.module.scss';
-import IntroImg from '@shared/assets/images/home-page/img_01.png';
+import IntroImg from '@shared/assets/images/intro/img_01.png';
 
 type SectionIntroProps = {
 	className?: string;

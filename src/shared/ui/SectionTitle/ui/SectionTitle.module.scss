@@ -1,16 +1,32 @@
+@use '@globals/styles/breakpoints';
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+
+	@media (width < breakpoints.$md) {
+		gap: 5px;
+	}
 }
 
 .title {
 	font-size: var(--font-size-xxl);
 	line-height: var(--font-line-xxl);
+
+	@media (width < breakpoints.$md) {
+		font-size: 26px;
+		line-height: 32px;
+	}
 }
 
 .subtitle {
 	font-size: var(--font-size-ml);
 	line-height: var(--font-line-ml);
 	color: var(--color-gray-200);
+
+	@media (width < breakpoints.$md) {
+		font-size: var(--font-size-m);
+		line-height: var(--font-line-m);
+	}
 }

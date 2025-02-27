@@ -50,15 +50,18 @@
 // titles
 
 .h1 {
+  position: relative;
+  z-index: 3;
   font-size: var(--font-size-xxxl);
   line-height: var(--font-line-xxxl);
   font-weight: 700;
 
   @media (width < breakpoints.$lg) {
-    text-align: center;
+    max-width: 350px;
   }
   @media (width < breakpoints.$md) {
-    font-size: var(--font-size-xxl);
-    line-height: var(--font-line-xxl);
+    max-width: 250px;
+    font-size: var(--font-size-xl);
+    line-height: var(--font-line-xl);
   }
 }

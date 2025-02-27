@@ -6,10 +6,11 @@
 
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-light: #D4E2FD;
   --color-blue-primary: #286DF7;
   --color-gray-400: #515151;
   --color-gray-200: #858585;
-  --color-transparent-gray: rgba(81, 81, 81, .2);
+  --color-transparent-gray: rgba(51, 51, 51, .2);
 
   // shadows
 
@@ -60,11 +61,15 @@
 
   // swiper
 
-  --swiper-pagination-bottom: 0;
-  --swiper-pagination-bullet-size: 10px;
-  --swiper-pagination-bullet-inactive-color: var(--color-gray-300);
-  --swiper-pagination-bullet-inactive-opacity: 1;
-  --swiper-pagination-color: var(--color-gray-800);
+  --swiper-scrollbar-border-radius: 10px;
+  --swiper-scrollbar-top: auto;
+  --swiper-scrollbar-bottom: 0;
+  --swiper-scrollbar-left: auto;
+  --swiper-scrollbar-right: 4px;
+  --swiper-scrollbar-sides-offset: 1%;
+  --swiper-scrollbar-bg-color: var(--color-light);
+  --swiper-scrollbar-drag-bg-color: var(--color-blue-primary);
+  --swiper-scrollbar-size: 8px;
 
   // header
 
@@ -83,10 +88,6 @@
   // mobile
 
   @media (width < breakpoints.$md) {
-
-    // container
-
-    --container-gap: 10px;
 
     // header
 
