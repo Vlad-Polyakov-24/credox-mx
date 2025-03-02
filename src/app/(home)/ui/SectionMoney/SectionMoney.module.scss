@@ -1,3 +1,107 @@
-.money {
+@use '@globals/styles/breakpoints';
 
+.money {
+	background-color: var(--color-white);
+	border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+
+	@media (width < breakpoints.$lg) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@media (width < breakpoints.$md) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&__container {
+		display: flex;
+
+		@media (width < breakpoints.$lg) {
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+
+	&__inner {
+		padding-top: 140px;
+		padding-bottom: 140px;
+
+		@media (width < breakpoints.$lg) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		+ .money__inner {
+			border-left: 1px solid var(--color-transparent-gray);
+
+			@media (width < breakpoints.$lg) {
+				border-left: none;
+			}
+		}
+
+		&.left {
+			width: 330px;
+			padding-right: 40px;
+
+			@media (width < breakpoints.$xl) {
+				padding-right: 20px;
+			}
+			@media (width < breakpoints.$lg) {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+		&.right {
+			width: calc(100% - 330px);
+			padding-left: 80px;
+
+			@media (width < breakpoints.$xl) {
+				padding-left: 20px;
+			}
+			@media (width < breakpoints.$lg) {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+
+	&__title {
+		@media (width < breakpoints.$md) {
+			position: relative;
+			padding-bottom: 40px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				translate: -50% 0;
+				width: 100vw;
+				height: 1px;
+				background-color: var(--color-transparent-gray);
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 16px;
+
+		@media (width < breakpoints.$md) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 12px;
+		}
+		@media (width < breakpoints.$xs) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		+ .money__button {
+			margin-top: 32px;
+
+			@media (width < breakpoints.$md) {
+				margin-top: 24px;
+			}
+		}
+	}
 }
