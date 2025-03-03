@@ -10,7 +10,7 @@ type FooterProps = {
 const Footer = ({ className }: FooterProps) => (
 	<footer className={classNames(styles.footer, {}, [className])}>
 		<Container>
-			<Logo/>
+			<Logo />
 			<div className={styles.footer__inner}>
 				<p className={styles.text}>
 					Credox.mx una compañia de marca comercial Fininity Ltd (número de registro: 14523902, dirección: Paadi tee 3,

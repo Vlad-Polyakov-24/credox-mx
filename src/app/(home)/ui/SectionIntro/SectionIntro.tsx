@@ -20,7 +20,6 @@ const SectionIntro = ({ className }: SectionIntroProps) => (
 					className={styles.intro__image}
 					src={IntroImg}
 					alt={'intro img'}
-					// width={400}
 					priority
 				/>
 			</div>
