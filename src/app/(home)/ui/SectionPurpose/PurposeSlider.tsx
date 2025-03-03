@@ -24,7 +24,7 @@ const PurposeSlider = ({ className }: PurposeSliderProps) => {
 			spaceBetween={isPC ? 16 : 32}
 			autoHeight
 		>
-			{purpose.map(({ img, caption }, i, arr) => (
+			{purpose.map(({ img, caption }, i) => (
 				<SwiperSlide key={i} style={{ height: '100%' }}>
 					<div className={styles.slide}>
 						<div className={styles.slide__inner}>
