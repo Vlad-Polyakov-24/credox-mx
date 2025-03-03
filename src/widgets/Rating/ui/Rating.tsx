@@ -31,6 +31,9 @@ const Rating = (props: RatingProps) => {
 					theme={ButtonTheme.CLEAR}
 					size={ButtonSize.TEXT}
 					disabled={!!onChange}
+					onMouseEnter={() => onChange && setHovered(star)}
+					onMouseLeave={() => onChange && setHovered(null)}
+					onClick={() => onChange && onChange(star)}
 				>
 					<Icon icon={<StarIcon />} size={isMobile ? IconSize.SIZE_16 : IconSize.SIZE_24} />
 				</Button>

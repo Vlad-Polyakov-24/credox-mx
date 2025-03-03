@@ -15,7 +15,7 @@ type PurposeSliderProps = {
 };
 
 const PurposeSlider = ({ className }: PurposeSliderProps) => {
-	const { isMobile, isTablet, isPC } = useMedia();
+	const { isMobile, isPC } = useMedia();
 
 	return (
 		<Swiper

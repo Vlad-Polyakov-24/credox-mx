@@ -34,7 +34,7 @@ const ReviewsSlider = ({ className }: ReviewsSliderProps) => {
 				},
 			}}
 		>
-			{reviews.map(({ name, rating, comment }, i, arr) => (
+			{reviews.map(({ name, rating, comment }, i) => (
 				<SwiperSlide key={i} style={{ height: 'auto' }}>
 					<div className={styles.slide}>
 						<div className={styles.slide__head}>
