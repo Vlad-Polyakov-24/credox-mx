@@ -13,12 +13,18 @@ const PageHome = () => (
 	<>
 		<SectionIntro />
 		<SectionConditions />
-		<SectionSteps />
-		<CTA />
+		<SectionSteps/>
+		<CTA tags={{ top: ['SinEsperas', 'PréstamosRápidos', 'DineroUrgente'], bottom: ['MejoresTasas', 'Seguro'] }} />
 		<SectionPurpose />
 		<SectionReasons />
 		<SectionMoney />
-		<CTA theme={CTATheme.SECOND} />
+		<CTA
+			theme={CTATheme.SECOND}
+			tags={{
+				top: ['FinanciamientoFácil', 'Transparente', 'RecíbeloHoy'],
+				bottom: ['Cómodo', 'CréditoEnLínea', 'AprobaciónInmediata'],
+			}}
+		/>
 		<SectionReviews />
 		<SectionComment />
 		<SectionAdvantages />

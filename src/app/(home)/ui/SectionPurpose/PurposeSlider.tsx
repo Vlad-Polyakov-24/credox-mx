@@ -15,13 +15,13 @@ type PurposeSliderProps = {
 };
 
 const PurposeSlider = ({ className }: PurposeSliderProps) => {
-	const { isMobile } = useMedia();
+	const { isMobile, isTablet, isPC } = useMedia();
 
 	return (
 		<Swiper
 			className={className}
-			slidesPerView={isMobile ? 1 : 3}
-			spaceBetween={32}
+			slidesPerView={isMobile ? 1.5 : 3}
+			spaceBetween={isPC ? 16 : 32}
 			autoHeight
 		>
 			{purpose.map(({ img, caption }, i, arr) => (

@@ -26,6 +26,10 @@
 			}
 		}
 	}
+	&--clear {
+		background-color: transparent;
+		border: none;
+	}
 
 	// size
 
@@ -40,6 +44,9 @@
 		font-size: var(--font-size-ml);
 		line-height: var(--font-line-ml);
 		font-weight: 500;
+	}
+	&--text {
+		padding: 0;
 	}
 
 	// fluid

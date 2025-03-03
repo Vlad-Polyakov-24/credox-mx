@@ -12,10 +12,10 @@ type StepsSliderProps = {
 };
 
 const StepsSlider = ({ className }: StepsSliderProps) => {
-	const { isMobile } = useMedia();
+	const { isMobile, isPC } = useMedia();
 
 	return (
-		<Swiper className={className} slidesPerView={isMobile ? 1 : 3} spaceBetween={64}>
+		<Swiper className={className} slidesPerView={isMobile ? 1 : 3} spaceBetween={isPC ? 32 : 64}>
 			{steps.map(({ caption, desc }, i, arr) => (
 				<SwiperSlide key={i}>
 					<div className={classNames(styles.slide, {[styles.arrow]: i + 1 !== arr.length}, [])}>

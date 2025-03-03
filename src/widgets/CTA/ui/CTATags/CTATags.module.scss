@@ -1,0 +1,23 @@
+@use '@globals/styles/breakpoints';
+
+.tags {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	&__item {
+		padding: 10px 30px;
+		border-radius: 38px;
+		background-color: rgba(255, 255, 255, .7);
+
+		@media (width < breakpoints.$md) {
+			padding: 5px 15px;
+    }
+
+		.tag {
+			font-size: var(--font-size-s);
+			line-height: var(--font-line-s);
+			color: var(--color-gray-200);
+		}
+	}
+}

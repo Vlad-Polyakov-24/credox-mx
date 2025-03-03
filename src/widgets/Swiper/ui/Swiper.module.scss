@@ -1,8 +1,14 @@
+@use '@globals/styles/breakpoints';
+
 .swiper {
 	width: 100%;
 
 	&__scrollbar {
 		position: relative !important;
-		margin-top: 20px;
+		margin-top: 50px;
+
+		@media (width < breakpoints.$md) {
+			margin-top: 25px;
+		}
 	}
 }

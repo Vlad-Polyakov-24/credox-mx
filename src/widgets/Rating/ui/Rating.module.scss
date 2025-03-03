@@ -1,0 +1,13 @@
+.rating {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
+	&__btn {
+		color: #BABFCB;
+
+		&.filled {
+			color: #E9C883;
+		}
+	}
+}

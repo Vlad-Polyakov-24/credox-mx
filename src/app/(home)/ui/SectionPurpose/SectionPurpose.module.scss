@@ -2,8 +2,38 @@
 
 .purpose {
 	position: relative;
+	z-index: 1;
 	border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
 	background-color: var(--color-white);
+	overflow: hidden;
+
+	@media (width < breakpoints.$lg) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		max-width: 460px;
+		height: 400px;
+		background-image: url('/purpose_bg.svg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		@media (width < breakpoints.$xl) {
+			max-width: 300px;
+			height: 265px;
+		}
+		@media (width < breakpoints.$lg) {
+			display: none;
+		}
+	}
 
 	&__container {
 		display: flex;
@@ -15,9 +45,13 @@
 	}
 
 	&__inner {
-		padding-top: 100px;
-		padding-bottom: 180px;
+		padding-top: 140px;
+		padding-bottom: 140px;
 
+		@media (width < breakpoints.$xl) {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
 		@media (width < breakpoints.$lg) {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -44,10 +78,32 @@
 			width: calc(100% - 330px);
 			padding-left: 80px;
 
+			@media (width < breakpoints.$xl) {
+				padding-left: 40px;
+			}
 			@media (width < breakpoints.$lg) {
 				width: 100%;
 				padding-left: 0;
 			}
+		}
+	}
+
+	&__title {
+		position: relative;
+
+		@media (width < breakpoints.$md) {
+			padding-bottom: 40px;
+
+			&:before {
+        content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				translate: -50% 0;
+				width: 100vw;
+				height: 1px;
+				background-color: var(--color-light);
+      }
 		}
 	}
 }
@@ -55,7 +111,7 @@
 .slide {
 	display: flex;
 	height: 100%;
-	padding-top: 25px;
+	padding-top: 50px;
 
 	&__inner {
 		display: flex;
@@ -67,6 +123,11 @@
 		padding-bottom: 32px;
 		border-radius: var(--secondary-border-radius);
 		background-color: var(--color-lignt-100);
+
+		@media (width < breakpoints.$xl) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 	}
 
 	&__img {
@@ -74,21 +135,31 @@
 		width: 100%;
 		max-width: 180px;
 		height: auto;
-		margin-top: -25px;
+		margin-top: -50px;
 		margin-left: auto;
 		margin-right: auto;
+
+		@media (width < breakpoints.$md) {
+			max-width: 140px;
+		}
 	}
 
 	&__caption {
 		font-size: var(--font-size-ml);
 		line-height: var(--font-line-ml);
 		font-weight: 700;
+
+		@media (width < breakpoints.$md) {
+			font-size: var(--font-size-m);
+			line-height: var(--font-line-m);
+		}
 	}
 
 	&__link {
 		display: flex;
 		align-items: center;
 		gap: 4px;
+		margin-top: auto;
 		font-weight: 500;
 		color: var(--color-blue-primary);
 
