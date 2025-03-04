@@ -13,7 +13,7 @@ const SectionMoney = ({ className }: SectionMoneyProps) => (
 	<section className={classNames(styles.money, {}, [className])}>
 		<Container className={styles.money__container}>
 			<div className={classNames(styles.money__inner, {}, [styles.left])}>
-				<SectionTitle className={styles.money__title} title={'¿Qué cantidad de dinero necesitas?'} />
+				<SectionTitle title={'¿Qué cantidad de dinero necesitas?'} />
 			</div>
 			<div className={classNames(styles.money__inner, {}, [styles.right])}>
 				<ul className={styles.money__list}>

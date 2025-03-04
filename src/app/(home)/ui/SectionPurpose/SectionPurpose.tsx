@@ -12,7 +12,7 @@ const SectionPurpose = ({ className }: SectionPurposeProps) => (
 	<section className={classNames(styles.purpose, {}, [className])}>
 		<Container className={styles.purpose__container}>
 			<div className={classNames(styles.purpose__inner, {}, [styles.left])}>
-				<SectionTitle className={styles.purpose__title} title={'¿Para qué sirve un microcrédito?'} />
+				<SectionTitle title={'¿Para qué sirve un microcrédito?'} />
 			</div>
 			<div className={classNames(styles.purpose__inner, {}, [styles.right])}>
 				<PurposeSlider />

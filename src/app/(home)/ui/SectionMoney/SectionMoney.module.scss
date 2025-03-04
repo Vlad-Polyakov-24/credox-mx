@@ -70,6 +70,21 @@
 				width: 100%;
 				padding-right: 0;
 			}
+			@media (width < breakpoints.$md) {
+				position: relative;
+				padding-bottom: 40px;
+
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					translate: -50% 0;
+					width: 100vw;
+					height: 1px;
+					background-color: var(--color-transparent-gray);
+				}
+			}
 		}
 		&.right {
 			width: calc(100% - 330px);
@@ -81,24 +96,6 @@
 			@media (width < breakpoints.$lg) {
 				width: 100%;
 				padding-left: 0;
-			}
-		}
-	}
-
-	&__title {
-		@media (width < breakpoints.$md) {
-			position: relative;
-			padding-bottom: 40px;
-
-			&:before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				translate: -50% 0;
-				width: 100vw;
-				height: 1px;
-				background-color: var(--color-transparent-gray);
 			}
 		}
 	}
