@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => (
-	<html lang={'en'}>
+	<html lang={'es'}>
 	<body className={`${inter.variable}`}>
 	<Header />
 	<main className={'main'}>
