@@ -37,8 +37,8 @@
 
 	&__row {
 		position: relative;
-		padding-top: 90px;
-		padding-bottom: 90px;
+		padding-top: 100px;
+		padding-bottom: 100px;
 	}
 
 	&__img {
@@ -149,10 +149,20 @@
 			}
 
 			&__img {
-				width: 370px;
+				width: 640px;
+
+				@media (width >= breakpoints.$xxl) {
+					z-index: 5;
+					left: -100px;
+				}
 
 				&-bg {
-					width: 370px;
+					width: 640px;
+
+					@media (width >= breakpoints.$xxl) {
+						left: -115px;
+						z-index: 4;
+					}
 				}
 			}
 		}

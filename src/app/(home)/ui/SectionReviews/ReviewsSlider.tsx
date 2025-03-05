@@ -4,7 +4,7 @@ import { SwiperSlide } from 'swiper/react';
 import { classNames } from '@shared/lib/classNames';
 import { useMedia } from '@shared/hooks/useMedia';
 import { Swiper } from '@widgets/Swiper';
-import { Rating } from '@widgets/Rating';
+import { Rating } from '@features/Rating';
 import { reviews } from '../../model/data/reviews.data';
 import styles from './SectionReviews.module.scss';
 

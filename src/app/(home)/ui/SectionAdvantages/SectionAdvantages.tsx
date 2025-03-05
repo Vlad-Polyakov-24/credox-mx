@@ -2,6 +2,7 @@ import { classNames } from '@shared/lib/classNames';
 import { Container } from '@shared/ui/Container';
 import { SectionTitle } from '@shared/ui/SectionTitle';
 import { Icon, IconSize } from '@shared/ui/Icon';
+import { anchors } from '@shared/const/anchors';
 import { advantages } from '../../model/data/advantages.data';
 import styles from './SectionAdvantages.module.scss';
 
@@ -10,7 +11,7 @@ type SectionAdvantagesProps = {
 };
 
 const SectionAdvantages = ({ className }: SectionAdvantagesProps) => (
-	<section className={classNames(styles.advantages, {}, [className])}>
+	<section id={anchors.ADVANTAGES} className={classNames(styles.advantages, {}, [className])}>
 		<Container>
 			<SectionTitle className={styles.advantages__title} title={'6 ventajas que recibirás'} />
 			<ul className={styles.advantages__list}>

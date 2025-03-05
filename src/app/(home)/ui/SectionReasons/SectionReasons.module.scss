@@ -10,8 +10,8 @@
 		padding-bottom: 100px;
 	}
 	@media (width < breakpoints.$lg) {
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 
 	&__title {
@@ -112,6 +112,11 @@
 			font-size: var(--font-size-ml);
 			line-height: var(--font-line-ml);
 			color: var(--color-light);
+
+			@media (width < breakpoints.$md) {
+				font-size: var(--font-size-m);
+				line-height: var(--font-line-m);
+			}
 		}
 	}
 }

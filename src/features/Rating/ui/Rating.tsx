@@ -27,10 +27,11 @@ const Rating = (props: RatingProps) => {
 			{[1, 2, 3, 4, 5].map(star => (
 				<Button
 					key={star}
+					type={'button'}
 					className={classNames(styles.rating__btn, { [styles.filled]: star <= (hovered ?? rating) }, [])}
 					theme={ButtonTheme.CLEAR}
 					size={ButtonSize.TEXT}
-					disabled={!!onChange}
+					disabled={!onChange}
 					onMouseEnter={() => onChange && setHovered(star)}
 					onMouseLeave={() => onChange && setHovered(null)}
 					onClick={() => onChange && onChange(star)}

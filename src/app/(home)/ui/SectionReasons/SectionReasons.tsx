@@ -1,6 +1,7 @@
 import { classNames } from '@shared/lib/classNames';
 import { Container } from '@shared/ui/Container';
 import { SectionTitle } from '@shared/ui/SectionTitle';
+import { anchors } from '@shared/const/anchors';
 import { reasons } from '../../model/data/reasons.data';
 import styles from './SectionReasons.module.scss';
 
@@ -9,7 +10,7 @@ type SectionReasonsProps = {
 };
 
 const SectionReasons = ({ className }: SectionReasonsProps) => (
-	<section className={classNames(styles.reasons, {}, [className])}>
+	<section id={anchors.REASONS} className={classNames(styles.reasons, {}, [className])}>
 		<Container>
 			<SectionTitle className={styles.reasons__title} title={'Razones para elegirnos'} />
 			<ul className={styles.reasons__list}>

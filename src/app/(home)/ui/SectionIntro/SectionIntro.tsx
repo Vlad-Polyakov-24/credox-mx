@@ -24,7 +24,7 @@ const SectionIntro = ({ className }: SectionIntroProps) => (
 				/>
 			</div>
 			<div className={classNames(styles.intro__inner, {}, [styles.right])}>
-				<Calculator/>
+				<Calculator />
 				<div className={styles.intro__desc}>
 					<p className={styles.text}>
 						Nuestro servicio monitoriza en tiempo real una base de prestamistas comprobados. Сredox.mx ofrece créditos

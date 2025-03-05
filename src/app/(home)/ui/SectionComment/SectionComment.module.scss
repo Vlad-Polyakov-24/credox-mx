@@ -6,6 +6,12 @@
 	background-color: var(--color-white);
 	border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
 	border-top: 1px solid var(--color-transparent-gray);
+	overflow: hidden;
+
+	@media (width < breakpoints.$lg) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 
 	&:before {
 		content: '';
@@ -15,11 +21,25 @@
 		bottom: 0;
 		width: 100%;
 		max-width: 600px;
-		height: 560px;
+		height: 510px;
 		background-image: url('/comment_bg.svg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+
+		@media (width < breakpoints.$xl) {
+			max-width: 450px;
+			height: 380px;
+		}
+		@media (width < breakpoints.$md) {
+			top: 0;
+			left: unset;
+			right: 0;
+			bottom: unset;
+			max-width: 200px;
+			height: 170px;
+			background-image: url('/comment_bg_mobile.svg');
+		}
 	}
 
 	&__container {
@@ -32,6 +52,7 @@
 	}
 
 	&__inner {
+		position: relative;
 		padding-top: 140px;
 		padding-bottom: 140px;
 
@@ -60,13 +81,13 @@
 				padding-right: 20px;
 			}
 			@media (width < breakpoints.$lg) {
+				display: flex;
+				justify-content: space-between;
 				width: 100%;
-				padding-right: 0;
+				padding-right: 170px;
+				padding-bottom: 60px;
 			}
 			@media (width < breakpoints.$md) {
-				position: relative;
-				padding-bottom: 40px;
-
 				&:before {
 					content: '';
 					position: absolute;
@@ -77,6 +98,9 @@
 					height: 1px;
 					background-color: var(--color-transparent-gray);
 				}
+			}
+			@media (width < breakpoints.$xs) {
+				padding-right: 0;
 			}
 		}
 		&.right {
@@ -96,6 +120,10 @@
 	&__title {
 		+ .comment__img {
 			margin-top: 40px;
+
+			@media (width < breakpoints.$lg) {
+				margin-top: 0;
+			}
 		}
 	}
 
@@ -103,5 +131,15 @@
 		width: 100%;
 		max-width: 405px;
 		height: auto;
+
+		@media (width < breakpoints.$lg) {
+			position: absolute;
+			top: -60px;
+			right: -50px;
+			max-width: 220px;
+		}
+		@media (width < breakpoints.$xs) {
+			display: none;
+		}
 	}
 }

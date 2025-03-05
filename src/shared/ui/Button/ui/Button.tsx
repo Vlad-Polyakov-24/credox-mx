@@ -10,15 +10,25 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	theme?: ButtonTheme;
 	size?: ButtonSize;
 	fluid?: boolean;
+	shadow?: boolean;
 }
 
 const Button = (props: ButtonProps) => {
-	const { className, text, children, theme = ButtonTheme.DEFAULT, size = ButtonSize.M, fluid = false } = props;
-	const mods: Mods = { [styles.fluid]: fluid };
+	const {
+		className,
+		text,
+		children,
+		theme = ButtonTheme.DEFAULT,
+		size = ButtonSize.M,
+		fluid = false,
+		shadow = false,
+		...rest
+	} = props;
+	const mods: Mods = { [styles['btn--fluid']]: fluid, [styles['btn--shadow']]: shadow };
 	const additional: Additional = [className, styles[theme], styles[size]];
 
 	return (
-		<button className={classNames(styles.btn, mods, additional)}>
+		<button className={classNames(styles.btn, mods, additional)} {...rest}>
 			{children || text}
 		</button>
 	);

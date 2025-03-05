@@ -14,7 +14,7 @@ const SectionConditions = ({ className }: SectionConditionsProps) => (
 			<ul className={styles.conditions__list}>
 				{conditions.map(({ icon, text }, i) => (
 					<li key={i} className={styles.conditions__item}>
-						<Icon icon={icon} size={IconSize.SIZE_36} />
+						<Icon icon={icon} size={IconSize.SIZE_36} style={{ color: 'var(--color-white)' }} />
 						{text}
 					</li>
 				))}

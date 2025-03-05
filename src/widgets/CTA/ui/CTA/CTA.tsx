@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { classNames } from '@shared/lib/classNames';
 import { Container } from '@shared/ui/Container';
 import { Button } from '@shared/ui/Button';
@@ -5,7 +6,6 @@ import { CTATags } from '../CTATags/CTATags';
 import { data } from '../../model/data/CTA.data';
 import { CTATheme } from '../../model/types/CTA.types';
 import styles from './CTA.module.scss';
-import Image from 'next/image';
 
 type CTAProps = {
 	className?: string;
@@ -31,7 +31,7 @@ const CTA = (props: CTAProps) => {
 							<div className={styles['cta__content-inner']}>
 								<h2 className={styles.title}>{data[theme].title}</h2>
 								<p className={styles.subtitle}>{data[theme].subtitle}</p>
-								<Button className={styles.cta__btn} text={'Envía tu solicitud'} fluid />
+								<Button className={styles.cta__btn} text={'Envía tu solicitud'} fluid shadow />
 							</div>
 							{tags?.bottom && <CTATags tags={tags?.bottom} className={classNames(styles.cta__tags, {}, [styles.bottom])} />}
 						</div>

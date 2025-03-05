@@ -1,14 +1,16 @@
+import { anchors } from '@shared/const/anchors';
+
 export const links = [
 	{
 		label: '¿Por qué elegirnos?',
-		href: 'whyUs',
+		href: anchors.REASONS,
 	},
 	{
 		label: 'Comentarios',
-		href: 'comments',
+		href: anchors.REVIEWS,
 	},
 	{
 		label: 'Nuestras ventajas',
-		href: 'advantages',
+		href: anchors.ADVANTAGES,
 	},
 ];

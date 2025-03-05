@@ -8,8 +8,8 @@
 	overflow: hidden;
 
 	@media (width < breakpoints.$lg) {
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 
 	&:before {
@@ -75,7 +75,7 @@
 				padding-right: 0;
 			}
 			@media (width < breakpoints.$md) {
-				padding-bottom: 40px;
+				padding-bottom: 60px;
 
 				&:before {
 					content: '';
