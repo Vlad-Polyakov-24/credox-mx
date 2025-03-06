@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import { classNames } from '@shared/lib/classNames';
 import { Routes } from '@shared/config/routes';
