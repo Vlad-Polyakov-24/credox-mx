@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import Link from 'next/link';
 import { classNames } from '@shared/lib/classNames';
-import { appState } from '@entities/app';
+import { appState } from '@entities/App';
 import { links } from '../../model/data/navigation.data';
 import { NavigationListTheme } from '../../model/types/Navigation.types';
 import styles from './NavigationList.module.scss';

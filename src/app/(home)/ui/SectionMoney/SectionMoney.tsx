@@ -1,8 +1,9 @@
 import { classNames } from '@shared/lib/classNames';
 import { Container } from '@shared/ui/Container';
 import { SectionTitle } from '@shared/ui/SectionTitle';
-import { Button, ButtonTheme } from '@shared/ui/Button';
+import { Button, ButtonTheme, ButtonType } from '@shared/ui/Button';
 import { moneyList } from '../../model/data/money.data';
+import { Routes } from '@shared/config/routes';
 import styles from './SectionMoney.module.scss';
 
 type SectionMoneyProps = {
@@ -19,11 +20,18 @@ const SectionMoney = ({ className }: SectionMoneyProps) => (
 				<ul className={styles.money__list}>
 					{moneyList.map(m => (
 						<li key={m}>
-							<Button text={`$${m}`} fluid />
+							<Button as={ButtonType.LINK} to={Routes.CONTACTS} text={`$${m}`} fluid />
 						</li>
 					))}
 				</ul>
-				<Button theme={ButtonTheme.OUTLINE} className={styles.money__button} text={'Envía tu solicitud'} fluid />
+				<Button
+					as={ButtonType.LINK}
+					to={Routes.CONTACTS}
+					theme={ButtonTheme.OUTLINE}
+					className={styles.money__button}
+					text={'Envía tu solicitud'}
+					fluid
+				/>
 			</div>
 		</Container>
 	</section>

@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { classNames } from '@shared/lib/classNames';
-import { Button } from '@shared/ui/Button';
+import { Button, ButtonType } from '@shared/ui/Button';
 import { Icon, IconSize } from '@shared/ui/Icon';
 import { CalculatorInput } from '../CalculatorInput/CalculatorInput';
+import { Routes } from '@shared/config/routes';
 import styles from './Calculator.module.scss';
 import InfoIcon from '@shared/assets/icons/info.svg';
 
@@ -36,7 +37,14 @@ const Calculator = ({ className }: CalculatorProps) => {
 				value={amountFixed.min}
 				total={amount}
 			/>
-			<Button className={'m-centred'} text={'Envía tu solicitud'} fluid shadow />
+			<Button
+				as={ButtonType.LINK}
+				to={Routes.CONTACTS}
+				className={'m-centred'}
+				text={'Envía tu solicitud'}
+				fluid
+				shadow
+			/>
 			<ul className={styles.calculator__info}>
 				<li><p>Cantidad:</p> <p><span className={'fw-700'}>${amount}</span></p></li>
 				<li>

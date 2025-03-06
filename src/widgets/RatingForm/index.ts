@@ -1,1 +1,1 @@
-export { default as RatingForm } from './ui/RatingForm/RatingForm';
+export { default as RatingForm } from './ui/RatingForm';

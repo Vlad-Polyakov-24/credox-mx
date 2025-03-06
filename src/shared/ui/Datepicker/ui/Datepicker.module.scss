@@ -1,0 +1,53 @@
+.datepicker {
+	display: block;
+	width: 100%;
+
+	&--error {
+		.datepicker__field {
+			outline: 1px solid var(--color-red);
+		}
+	}
+
+	&__caption {
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+
+		+ * {
+			margin-top: 8px;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__field {
+		display: block;
+		width: 100%;
+		padding: 20px 32px !important;
+		background-color: var(--color-gray-100);
+		border-radius: 8px;
+		border: none;
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+
+		&::placeholder {
+			color: var(--color-lignt-200);
+		}
+
+		&:focus {
+			outline-color: var(--color-blue-primary);
+			border: none;
+		}
+	}
+
+	&__calendar-icon {
+		z-index: 1;
+		top: 50%;
+		translate: 0 -50%;
+		fill: var(--color-blue-primary);
+	}
+}

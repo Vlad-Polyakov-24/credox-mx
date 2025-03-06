@@ -1,0 +1,76 @@
+@use '@globals/styles/breakpoints';
+
+.form {
+	position: relative;
+	z-index: 1;
+	flex-grow: 1;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background-image: url('/page-contacts_bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&__back {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+		color: var(--color-gray-200);
+
+		@media (hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		width: 100%;
+		max-width: 760px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 32px 24px;
+		border-radius: var(--primary-border-radius);
+		background-color: var(--color-white);
+
+		@media (width < breakpoints.$md) {
+			padding: 0;
+			border-radius: 0;
+			background-color: transparent;
+    }
+
+		&-inner {
+			padding-left: 46px;
+			padding-right: 46px;
+
+			@media (width < breakpoints.$md) {
+				padding: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-size: var(--font-size-xl);
+		line-height: var(--font-line-xl);
+		font-weight: 700;
+		text-align: center;
+
+		@media (width < breakpoints.$md) {
+			font-size: 26px;
+			line-height: 32px;
+		}
+
+		+ * {
+			margin-top: 40px;
+
+			@media (width < breakpoints.$md) {
+				margin-top: 24px;
+			}
+		}
+	}
+}

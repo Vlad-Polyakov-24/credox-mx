@@ -5,12 +5,12 @@ import { ErrorMessage, Field, Form, Formik, type FormikHelpers } from 'formik';
 import { classNames } from '@shared/lib/classNames';
 import { useToast } from '@shared/hooks/useToast';
 import { Button } from '@shared/ui/Button';
+import { ErrorIcon } from '@shared/ui/ErrorIcon';
 import { Rating } from '@features/Rating';
 import { OverlayLoader } from '@features/OverlayLoader';
-import { ErrorIcon } from '../ErrorIcon/ErrorIcon';
 import { ratingSchema } from '@shared/const/validationSchemas';
-import { initialValues } from '../../model/data/ratingForm.data';
-import type { IRatingForm } from '../../model/types/RatingForm.types';
+import { initialValues } from '../model/data/ratingForm.data';
+import type { IRatingForm } from '../model/types/RatingForm.types';
 import styles from './RatingForm.module.scss';
 
 type RatingFormProps = {
@@ -46,7 +46,7 @@ const RatingForm = ({ className }: RatingFormProps) => {
 								className={styles.form__input}
 								placeholder={'Su nombre'}
 							/>
-							<ErrorMessage name={'name'} render={() => <ErrorIcon/>}/>
+							<ErrorMessage name={'name'} render={() => <ErrorIcon className={styles.form__error} />}/>
 						</div>
 						<div className={styles.form__row}>
 							<Field
@@ -55,7 +55,7 @@ const RatingForm = ({ className }: RatingFormProps) => {
 								className={styles.form__textarea}
 								placeholder={'Deja tu comentario aquí…'}
 							/>
-							<ErrorMessage name={'comment'} render={() => <ErrorIcon/>}/>
+							<ErrorMessage name={'comment'} render={() => <ErrorIcon className={styles.form__error} />}/>
 						</div>
 						<div className={styles.form__row}>
 							<Rating
@@ -63,7 +63,7 @@ const RatingForm = ({ className }: RatingFormProps) => {
 								rating={values.rating}
 								onChange={(value) => setFieldValue('rating', value)}
 							/>
-							<ErrorMessage name={'rating'} render={() => <ErrorIcon/>}/>
+							<ErrorMessage name={'rating'} render={() => <ErrorIcon className={styles.form__error} />}/>
 						</div>
 					</div>
 					<Button type={'submit'} text={'Envía tu solicitud'} fluid shadow />

@@ -5,7 +5,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { classNames } from '@shared/lib/classNames';
 import { Button, ButtonTheme } from '@shared/ui/Button';
 import { NavigationList } from '../NavigationList/NavigationList';
-import { appState } from '@entities/app';
+import { appState } from '@entities/App';
 import { NavigationListTheme } from '../../model/types/Navigation.types';
 import styles from './NavigationMobile.module.scss';
 

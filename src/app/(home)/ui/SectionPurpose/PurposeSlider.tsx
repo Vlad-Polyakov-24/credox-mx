@@ -7,6 +7,7 @@ import { useMedia } from '@shared/hooks/useMedia';
 import { Swiper } from '@widgets/Swiper';
 import { Icon, IconSize } from '@shared/ui/Icon';
 import { purpose } from '../../model/data/purpose.data';
+import { Routes } from '@shared/config/routes';
 import styles from './SectionPurpose.module.scss';
 import ArrowIcon from '@shared/assets/icons/arrow-to-right.svg';
 
@@ -30,7 +31,7 @@ const PurposeSlider = ({ className }: PurposeSliderProps) => {
 						<div className={styles.slide__inner}>
 							<Image src={img} className={styles.slide__img} alt={`purpose slide ${i + 1}`} />
 							<p className={styles.slide__caption}>{caption}</p>
-							<Link href={'/'} className={styles.slide__link}>
+							<Link href={Routes.CONTACTS} className={styles.slide__link}>
 								Envía tu solicitud
 								<Icon icon={<ArrowIcon />} size={IconSize.SIZE_24} />
 							</Link>

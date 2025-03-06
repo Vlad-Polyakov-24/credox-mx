@@ -11,4 +11,4 @@ const ErrorIcon = ({ className }: ErrorIconProps) => (
 	<Icon icon={<ErrIcon />} size={IconSize.SIZE_20} className={classNames(styles.error, {}, [className])} />
 );
 
-export { ErrorIcon };
+export default ErrorIcon;

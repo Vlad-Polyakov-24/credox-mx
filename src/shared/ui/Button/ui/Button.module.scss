@@ -20,6 +20,16 @@
 			}
 		}
 	}
+	&--white {
+		background-color: var(--color-white);
+		color: var(--color-blue-primary);
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: #dedede;
+			}
+		}
+	}
 	&--outline {
 		border: 1px solid var(--color-blue-primary);
 		background-color: transparent;
