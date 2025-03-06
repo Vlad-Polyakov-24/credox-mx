@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
+import { ErrorBoundary } from '@globals/providers/ErrorBoundary';
 import '@globals/styles/index.scss';
 
 const inter = Inter({
@@ -17,7 +18,9 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => (
 	<html lang={'es'}>
 	<body className={`${inter.variable}`}>
-	{children}
+	<ErrorBoundary>
+		{children}
+	</ErrorBoundary>
 	<ToastContainer theme={'light'} />
 	</body>
 	</html>
