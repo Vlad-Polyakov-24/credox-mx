@@ -43,7 +43,15 @@ const ContactsForm = ({ className }: ContactsFormProps) => {
 
 					</div>
 					<Button type={'submit'} text={'Continuar'} fluid shadow />
-					<Button type={'button'} text={'err'} fluid shadow onClick={() => { throw new Error }} />
+					<Button
+						type={'button'}
+						text={'err'}
+						onClick={() => {
+							throw new Error('Тестова помилка');
+						}}
+						fluid
+						shadow
+					/>
 				</Form>
 			)}
 		</Formik>
