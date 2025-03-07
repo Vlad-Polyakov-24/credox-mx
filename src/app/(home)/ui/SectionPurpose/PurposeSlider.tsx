@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { SwiperSlide } from 'swiper/react';
 import { useMedia } from '@shared/hooks/useMedia';
 import { Swiper } from '@widgets/Swiper';
 import { Icon, IconSize } from '@shared/ui/Icon';
+import { Button, ButtonSize, ButtonTheme, ButtonType } from '@shared/ui/Button';
 import { purpose } from '../../model/data/purpose.data';
 import { Routes } from '@shared/config/routes';
 import styles from './SectionPurpose.module.scss';
@@ -31,10 +31,16 @@ const PurposeSlider = ({ className }: PurposeSliderProps) => {
 						<div className={styles.slide__inner}>
 							<Image src={img} className={styles.slide__img} alt={`purpose slide ${i + 1}`} />
 							<p className={styles.slide__caption}>{caption}</p>
-							<Link href={Routes.CONTACTS} className={styles.slide__link}>
+							<Button
+								as={ButtonType.LINK}
+								to={Routes.CONTACTS}
+								theme={ButtonTheme.CLEAR}
+								size={ButtonSize.TEXT}
+								className={styles.slide__link}
+							>
 								Envía tu solicitud
 								<Icon icon={<ArrowIcon />} size={IconSize.SIZE_24} />
-							</Link>
+							</Button>
 						</div>
 					</div>
 				</SwiperSlide>

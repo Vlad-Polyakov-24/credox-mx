@@ -3,7 +3,7 @@ export const initialValues = {
 	last_name: '',
 	birthday: null,
 	email: '',
-	phone: '',
+	contact_number: '',
 	mailing: false,
 	conditions: false,
 };

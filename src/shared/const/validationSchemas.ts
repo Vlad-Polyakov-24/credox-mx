@@ -29,7 +29,7 @@ export const contactsSchema = yup.object().shape({
 		.trim()
 		.email('Dirección de correo electrónico no válida')
 		.required('El correo electrónico es obligatorio'),
-	phone: yup
+	contact_number: yup
 		.string()
 		.required('Introduzca el número de teléfono')
 		.matches(

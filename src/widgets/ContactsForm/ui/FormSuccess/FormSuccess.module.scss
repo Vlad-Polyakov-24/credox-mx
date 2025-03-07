@@ -1,0 +1,46 @@
+@use '@globals/styles/breakpoints';
+
+.success {
+
+	&__icon {
+		margin-left: auto;
+		margin-right: auto;
+		color: var(--color-blue-primary);
+
+		+ .success__title {
+			margin-top: 24px;
+		}
+	}
+
+	&__title {
+		font-size: var(--font-size-xl);
+		line-height: var(--font-line-xl);
+		font-weight: 700;
+		text-align: center;
+
+		@media (width < breakpoints.$sm) {
+			font-size: var(--font-size-l);
+			line-height: var(--font-line-l);
+		}
+
+		+ .success__counter {
+			margin-top: 40px;
+		}
+	}
+
+	&__counter {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		text-align: center;
+
+		.counter {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			font-weight: 500;
+			color: var(--color-blue-primary);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+@use '@globals/styles/breakpoints';
+
+.card {
+	position: relative;
+	width: 100%;
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 32px 24px;
+	border-radius: var(--primary-border-radius);
+	background-color: var(--color-white);
+	overflow: hidden;
+
+	@media (width < breakpoints.$md) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}

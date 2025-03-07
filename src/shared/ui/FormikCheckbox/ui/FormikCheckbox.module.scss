@@ -1,3 +1,5 @@
+@use '@globals/styles/breakpoints';
+
 .checkbox {
 	position: relative;
 	cursor: pointer;
@@ -81,5 +83,10 @@
 		font-size: var(--font-size-s);
 		line-height: var(--font-line-s);
 		color: var(--color-gray-400);
+
+		@media (width < breakpoints.$md) {
+			font-size: var(--font-size-xs);
+			line-height: var(--font-line-xs);
+		}
 	}
 }

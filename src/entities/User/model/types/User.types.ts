@@ -3,5 +3,5 @@ export interface IUser {
 	last_name: string,
 	birthday: Date | null,
 	email: string,
-	phone: string,
+	contact_number: string,
 }

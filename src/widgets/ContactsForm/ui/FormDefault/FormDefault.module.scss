@@ -1,0 +1,53 @@
+@use '@globals/styles/breakpoints';
+
+.default {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	@media (width < breakpoints.$md) {
+		gap: 12px;
+	}
+
+	&__back {
+		gap: 8px;
+		font-size: var(--font-size-ml);
+		line-height: var(--font-line-ml);
+		color: var(--color-gray-200);
+
+		@media (hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__inner {
+		padding-left: 46px;
+		padding-right: 46px;
+
+		@media (width < breakpoints.$md) {
+			padding: 0;
+		}
+	}
+
+	&__title {
+		font-size: var(--font-size-xl);
+		line-height: var(--font-line-xl);
+		font-weight: 700;
+		text-align: center;
+
+		@media (width < breakpoints.$md) {
+			font-size: 26px;
+			line-height: 32px;
+		}
+
+		+ * {
+			margin-top: 40px;
+
+			@media (width < breakpoints.$md) {
+				margin-top: 12px;
+			}
+		}
+	}
+}
