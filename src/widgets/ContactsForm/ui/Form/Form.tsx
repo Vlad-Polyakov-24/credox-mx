@@ -54,10 +54,12 @@ const Form = ({ className, setFormStatus }: FormProps) => {
 		setSubParams(subs);
 	}, [searchParams]);
 
-	const buildPayload = ({ contact_number, birthday, conditions: _, mailing: __, ...rest  }: IContactForm) => ({
+	const buildPayload = ({ contact_number, birthday, first_name, last_name, email  }: IContactForm) => ({
 		contact_number: cleanPhoneNumber(contact_number),
 		birthday: birthday ? birthday.toISOString() : '',
-		...rest,
+		first_name,
+		last_name,
+		email,
 		...subParams,
 	});
 
