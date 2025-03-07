@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
 		description: 'credox.MX is nice and good service',
 		images: [
 			{
-				url: '/og-image.png',
+				url: '/og-image.jpg',
 				alt: 'credox.MX Open Graph Image',
 			},
 		],
@@ -32,14 +31,6 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => (
 	<html lang={'es'}>
-	<Head>
-		<link rel={'icon'} href={'/favicon.ico'} />
-		<link rel={'apple-touch-icon'} href={'/apple-touch-icon.png'} />
-		<link rel={'manifest'} href={'/site.webmanifest'} />
-		<meta property={'og:title'} content={'credox.MX'} />
-		<meta property={'og:description'} content={'credox.MX is nice and good service'} />
-		<meta property={'og:image'} content={'/og-image.png'} />
-	</Head>
 	<body className={`${inter.variable}`}>
 	<ErrorBoundary>
 		{children}
