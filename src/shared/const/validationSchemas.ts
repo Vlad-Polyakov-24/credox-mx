@@ -36,4 +36,8 @@ export const contactsSchema = yup.object().shape({
 			/^\+52\s\(\d{3}\)\s\d{3}-\d{4}$/,
 			'Formato de número incorrecto. Debe ser +52 (000) 000-0000'
 		),
+	mailing: yup.boolean().default(false),
+	conditions: yup
+		.boolean()
+		.oneOf([true], 'Debes aceptar los términos y condiciones'),
 });

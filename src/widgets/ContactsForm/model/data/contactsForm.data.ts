@@ -4,6 +4,8 @@ export const initialValues = {
 	birthday: null,
 	email: '',
 	phone: '',
+	mailing: false,
+	conditions: false,
 };
 
 export const inputs = [

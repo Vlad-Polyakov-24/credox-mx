@@ -5,7 +5,7 @@
 	flex-direction: column;
 	gap: 24px;
 
-	&__inner {
+	&__inputs {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 16px;
@@ -13,6 +13,26 @@
 		@media (width < breakpoints.$md) {
 			grid-template-columns: 1fr;
 			gap: 12px;
+		}
+	}
+
+	&__checkboxes {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		@media (width < breakpoints.$md) {
+			gap: 12px;
+		}
+	}
+
+	&__link {
+		color: var(--color-blue-primary);
+
+		@media (hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
