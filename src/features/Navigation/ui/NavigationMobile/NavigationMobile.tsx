@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { classNames } from '@shared/lib/classNames';
-import { Button, ButtonTheme } from '@shared/ui/Button';
+import { Button, ButtonTheme, ButtonType } from '@shared/ui/Button';
 import { NavigationList } from '../NavigationList/NavigationList';
 import { appState } from '@entities/App';
+import { Routes } from '@shared/config/routes';
 import { NavigationListTheme } from '../../model/types/Navigation.types';
 import styles from './NavigationMobile.module.scss';
 
@@ -31,6 +32,10 @@ const NavigationMobile = ({ className }: NavigationMobileProps) => {
 		return () => enableBodyScroll(nav);
 	}, [isMobileNav]);
 
+	const handleCloseMenu = useCallback(() => {
+		set({ isMobileNav: false });
+	}, [set]);
+
 	return (
 		<nav
 			ref={navRef}
@@ -42,7 +47,14 @@ const NavigationMobile = ({ className }: NavigationMobileProps) => {
 				onClick={(e) => e.stopPropagation()}
 			>
 				<NavigationList theme={NavigationListTheme.MOBILE} />
-				<Button theme={ButtonTheme.OUTLINE} text={'Envía tu solicitud'} className={'m-centred mt-32'} />
+				<Button
+					as={ButtonType.LINK}
+					to={Routes.CONTACTS}
+					theme={ButtonTheme.OUTLINE}
+					text={'Envía tu solicitud'}
+					className={'m-centred mt-32'}
+					onClick={handleCloseMenu}
+				/>
 			</div>
 		</nav>
 	);
