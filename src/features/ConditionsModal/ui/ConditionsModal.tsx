@@ -19,7 +19,7 @@ const ConditionsModal = ({ isOpen, onClose, theme }: ConditionsModalProps) => {
 				<h2 className={styles.content__title}>{data[theme].title}</h2>
 				{data[theme].sections.map(({ title, content }, sectionIndex) => (
 					<div key={sectionIndex} className={styles.content__inner}>
-						<h3 className={styles.content__h3}>{title}</h3>
+						{title && <h3 className={styles.content__h3}>{title}</h3>}
 						{content.map(({ text, list }, contentIndex) => (
 							<Fragment key={`content-${contentIndex}`}>
 								<p className={styles.content__p}>{text}</p>

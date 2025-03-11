@@ -4,7 +4,7 @@ import { ConditionsModalTheme } from '../types/ConditionsModal.types';
 interface IContent {
 	title: string;
 	sections: {
-		title: string;
+		title?: string;
 		content: {
 			text: ReactNode | string;
 			list?: string[];
@@ -22,13 +22,13 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 					{
 						text: (
 							<>
-								Esta página web (en adelante “Web”) es propiedad de Fininity Ltd. (N° de registro: 14523902, con domicilio: calle Paadi tee 3, Haabneeme, 74001, EE).<br />
+								Esta página web (en adelante “Web”) es propiedad de <span className={'fw-700'}>Credox</span> (N° de registro: 14523902, con domicilio: <span className={'fw-700'}>calle Randvere tee 9, Haabneeme, 74001, EE</span>).<br />
 								<br />
 								Si usted utiliza nuestros servicios y proporciona su información personal, usted acepta y se compromete a cumplir todas las Condiciones mencionadas adelante. Por favor, lea nuestros Términos y Condiciones.<br />
 								<br />
 								Nos reservamos el derecho a cambiar estos Términos y Condiciones en cualquier momento sin previo aviso. Usted es el único responsable y se compromete a revisar periódicamente los Términos y Condiciones de esta Web.<br />
 								<br />
-								Todos los servicios de Fininity Ltd. están sujetos a las presentes Términos y Condiciones del uso de la Web.
+								Todos los servicios de <span className={'fw-700'}>Credox</span> están sujetos a las presentes Términos y Condiciones del uso de la Web.
 							</>
 						),
 					}
@@ -40,13 +40,13 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 					{
 						text: (
 							<>
-								El fin de esta Web es recopilar las ofertas de préstamos online, dar información sobre las ofertas del mercado y elegir la mejor oferta para Usted. El uso de esta Web (www.crezu.mx) es gratuito. Los proveedores de préstamos pagan a Fininity Ltd. por el servicio de envío de solicitudes y datos de clientes.<br />
+								El fin de esta Web es recopilar las ofertas de préstamos online, dar información sobre las ofertas del mercado y elegir la mejor oferta para Usted. El uso de esta Web (<a href={'https://crezu.mx/'}>www.crezu.mx</a>) es gratuito. Los proveedores de préstamos pagan a <span className={'fw-700'}>Credox</span> por el servicio de envío de solicitudes y datos de clientes.<br />
 								<br />
 								La Web no proporciona préstamos sino recopila y compara las ofertas de terceros.<br />
 								<br />
 								La Web muestra los enlaces desde esta Web a sitios web de terceros únicamente con fines informativos. No nos hacemos responsables de su contenido, ya que no comprobamos estos sitios web y ellos no pertenecen a nosotros.<br />
 								<br />
-								Fininity Ltd. también recopila todos los datos relativos de usted y los proporciona a los proveedores de préstamos de Crezu vía API para encontrar la mejor oferta para usted. Fininity Ltd. no es capaz de reenviar información crediticia sobre usted y sobre el préstamo que desea recibir, a menos que rellene todas las casillas del formulario de la solicitud y clique el botón.
+								<span className={'fw-700'}>Credox</span> también recopila todos los datos relativos de usted y los proporciona a los proveedores de préstamos de Crezu vía API para encontrar la mejor oferta para usted. <span className={'fw-700'}>Credox</span> no es capaz de reenviar información crediticia sobre usted y sobre el préstamo que desea recibir, a menos que rellene todas las casillas del formulario de la solicitud y clique el botón.
 							</>
 						),
 					},
@@ -82,13 +82,13 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 					{
 						text: (
 							<>
-								La Web puede contener los enlaces de terceros, pero no garantiza ni asume responsabilidad en cuanto a la exactitud y la actualidad del contenido de la información de terceros en la Web y no se responsabiliza de los daños derivados del uso de su contenido. En cualquier momento, sin notificación previa y sin justificación, Fininity Ltd. puede dar por terminada la prestación de sus servicios.<br />
+								La Web puede contener los enlaces de terceros, pero no garantiza ni asume responsabilidad en cuanto a la exactitud y la actualidad del contenido de la información de terceros en la Web y no se responsabiliza de los daños derivados del uso de su contenido. En cualquier momento, sin notificación previa y sin justificación, <span className={'fw-700'}>Credox</span> puede dar por terminada la prestación de sus servicios.<br />
 								<br />
 								Nosotros no garantizamos que esta Web funcione ininterrumpidamente o esté libre de errores.<br />
 								<br />
-								Fininity Ltd. no asume ninguna responsabilidad acerca de las decisiones del usuario, tomadas basándose en la información presentada en la Web. No nos responsabilizamos de cualquier daño que puede causar el uso de la información exhibida en la Web.<br />
+								<span className={'fw-700'}>Credox</span> no asume ninguna responsabilidad acerca de las decisiones del usuario, tomadas basándose en la información presentada en la Web. No nos responsabilizamos de cualquier daño que puede causar el uso de la información exhibida en la Web.<br />
 								<br />
-								Fininity Ltd. no asume ninguna responsabilidad por las decisiones tomadas por un proveedor de préstamo a la base de la información enviada por Crezu a los proveedores de préstamos.
+								<span className={'fw-700'}>Credox</span> no asume ninguna responsabilidad por las decisiones tomadas por un proveedor de préstamo a la base de la información enviada por Crezu a los proveedores de préstamos.
 							</>
 						),
 					},
@@ -100,7 +100,7 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 					{
 						text: (
 							<>
-								Fininity Ltd. se compromete a tratar con la máxima privacidad, seguridad y confidencialidad toda aquella información facilitada libremente por el usuario a través de los formularios existentes en la página web.<br />
+								<span className={'fw-700'}>Credox</span> se compromete a tratar con la máxima privacidad, seguridad y confidencialidad toda aquella información facilitada libremente por el usuario a través de los formularios existentes en la página web.<br />
 								<br />
 								La base del procesamiento de los datos personales queda prevista en el artículo 6 (1) (b) del Reglamento General de la Protección de Datos.<br />
 								<br />
@@ -125,9 +125,9 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 					{
 						text: (
 							<>
-								En Crezu nos tomamos muy en serio su privacidad y la seguridad de su información personal. Por ello, mediante este documento hemos tratado de describir del modo más sencillo posible cómo recolectamos y tratamos su información.<br/>
+								<span className={'fw-700'}>En Credox nos tomamos muy en serio su privacidad y la seguridad de su información personal.</span> Por ello, mediante este documento hemos tratado de describir del modo más sencillo posible cómo recolectamos y tratamos su información.<br/>
 								<br/>
-								Esta política de privacidad describe como Fininity Ltd. (en adelante, “Fininity Ltd.” o “Nosotros”, N° de registro: 14523902 y con domicilio: calle Paadi tee 3, Haabneeme, 74001, EE) trata los datos de carácter personal de sus usuarios (en adelante, “Usted”) en relación con el uso de su sitio web crezu.net (en adelante, el “Sitio Web” o Crezu) y de los Servicios ofrecidos por Crezu.<br/>
+								Esta política de privacidad describe como <span className={'fw-700'}>Credox</span> (en adelante, “<span className={'fw-700'}>Credox</span>” o “Nosotros”, N° de registro: 14523902 y con domicilio: <span className={'fw-700'}>calle Mere pst 10, Tallinn, 10111, EE</span>) trata los datos de carácter personal de sus usuarios (en adelante, “Usted”) en relación con el uso de su sitio web <span className={'fw-700'}>credox.net</span> (en adelante, el “Sitio Web” o <span className={'fw-700'}>Credox</span>) y de los Servicios ofrecidos por <span className={'fw-700'}>Credox</span>.<br/>
 								<br/>
 								Este documento está adaptado al Reglamento Europeo de Protección de Datos (RGPD).<br/>
 								<br/>
@@ -141,7 +141,11 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 				title: 'El fin de presente política de privacidad',
 				content: [
 					{
-						text: 'El fin de presente política de privacidad es explicar cómo Crezu recolecta, usa y comparte sus datos de carácter personal y qué derechos tiene respecto de sus datos.',
+						text: (
+							<>
+								El fin de presente política de privacidad es explicar cómo <span className={'fw-700'}>Credox</span> recolecta, usa y comparte sus datos de carácter personal y qué derechos tiene respecto de sus datos.
+							</>
+						),
 					},
 				],
 			},
@@ -149,7 +153,11 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 				title: '¿Quién es el responsable del tratamiento de sus datos?',
 				content: [
 					{
-						text: 'El responsable es la compañía Fininity Ltd. N° de registro: 14523902 y con domicilio: Paadi tee 3, Haabneeme, 74001, EE.',
+						text: (
+							<>
+								El responsable es la compañía <span className={'fw-700'}>Credox</span>. N° de registro: 14523902 y con domicilio: <span className={'fw-700'}>calle Mere pst 10, Tallinn, 10111, EE</span>.
+							</>
+						),
 					},
 				],
 			},
@@ -160,7 +168,7 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 						text: 'Fuentes de las que proceden los datos personales:',
 						list: [
 							'Cuando Usted nos los proporcione directamente a través de los formularios de nuestro Sitio Web (e.g. al completar una solicitud de préstamo o de cualquier otra manera);',
-							'De páginas web de terceros que se dedican a la generación de oportunidades en relación a la prestación de servicios, entre ellos, los ofrecidos por Crezu;',
+							'De páginas web de terceros que se dedican a la generación de oportunidades en relación a la prestación de servicios, entre ellos, los ofrecidos por Credox;',
 							'Fuentes accesibles al público (e.g. los perfiles públicos de redes sociales tales como Facebook o LinkedIn);',
 							'De manera automática mediante el uso de herramientas informáticas (e.g. información relativa a su comportamiento en nuestro Sitio Web obtenida a través de la herramienta Yandex Metrika).',
 						],
@@ -289,11 +297,11 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 					{
 						text: (
 							<>
-								En caso de que tenga alguna pregunta en relación con el tratamiento de sus datos personales por parte nuestra o si desea ejercer alguno de sus derechos, puede ponerse en contacto con nosotros a través de los siguientes datos de contacto: <a href={'mailto:contacto@crezu.mx'}>contacto@crezu.mx</a><br/>
+								En caso de que tenga alguna pregunta en relación con el tratamiento de sus datos personales por parte nuestra o si desea ejercer alguno de sus derechos, puede ponerse en contacto con nosotros a través de los siguientes datos de contacto: <a href={'mailto:contacto@credox.mx'}>contacto@credox.mx</a><br/>
 								<br/>
-								Crezu responderá a la solicitud sin demora indebida y, en cualquier caso, en el plazo de un mes a partir de la recepción de la solicitud (ese período puede, teniendo en cuenta las circunstancias, prorrogarse dos meses). El tiempo de respuesta dependerá de la cantidad de solicitudes que reciba Crezu y del contenido de una solicitud en particular.<br/>
+								<span className={'fw-700'}>Credox</span> responderá a la solicitud sin demora indebida y, en cualquier caso, en el plazo de un mes a partir de la recepción de la solicitud (ese período puede, teniendo en cuenta las circunstancias, prorrogarse dos meses). El tiempo de respuesta dependerá de la cantidad de solicitudes que reciba <span className={'fw-700'}>Credox</span> y del contenido de una solicitud en particular.<br/>
 								<br/>
-								Política de Privacidad válida a partir del 20 de Septiembre de 2018.
+								<span className={'fw-700'}>Política de Privacidad válida a partir del 20 de Septiembre de 2018.</span>
 							</>
 						),
 					},
@@ -305,7 +313,7 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 					{
 						text: (
 							<>
-								Si quiere darse de baja de toda nuestra publicidad, por favor escriba a <a href={'mailto:darsedebaja@crezu.mx'}>darsedebaja@crezu.mx</a>
+								Si quiere darse de baja de toda nuestra publicidad, por favor escriba a <a href={'mailto:darsedebaja@credox.mx'}>darsedebaja@credox.mx</a>
 							</>
 						),
 					},
@@ -314,7 +322,15 @@ export const data: Record<ConditionsModalTheme, IContent> = {
 		],
 	},
 	[ConditionsModalTheme.COOKIE]: {
-		title: 'Cookies',
-		sections: [],
+		title: 'Aviso de uso de cookies',
+		sections: [
+			{
+				content: [
+					{
+						text: 'Este sitio web utiliza cookies propias y de terceros para mejorar tu experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido y la publicidad. Al continuar navegando, aceptas el uso de cookies. Para más información, consulta nuestra Política de Cookies.',
+					},
+				],
+			},
+		],
 	},
 };
