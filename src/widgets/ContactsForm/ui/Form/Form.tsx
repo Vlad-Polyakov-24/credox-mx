@@ -115,8 +115,7 @@ const Form = ({ className, setFormStatus }: FormProps) => {
 								name={'conditions'}
 								label={
 									<>
-										Сonfirmo que he leído y acepto las <span className={styles.form__link}
-										                                         onClick={(e) => handleOpenModal(e, ConditionsModalTheme.CONDITIONS)}>condiciones generales</span>, <span
+										Сonfirmo que he leído y acepto las <span className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.CONDITIONS)}>condiciones generales</span>, <span
 										className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.PRIVACY)}>política de privacidad</span> y <span
 										className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.COOKIE)}>política de cookies</span>.
 									</>

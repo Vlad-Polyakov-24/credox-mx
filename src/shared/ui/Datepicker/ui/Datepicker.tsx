@@ -1,4 +1,5 @@
 import DatePicker from 'react-datepicker';
+import { IMaskInput } from 'react-imask';
 import { ErrorMessage, useField } from 'formik';
 import { classNames } from '@shared/lib/classNames';
 import { ErrorIcon } from '@shared/ui/ErrorIcon';
@@ -31,6 +32,10 @@ const Datepicker = (props: DatepickerProps) => {
 					selected={date}
 					showIcon
 					calendarIconClassName={styles['datepicker__calendar-icon']}
+					showMonthDropdown
+					showYearDropdown
+					dropdownMode={'select'}
+					customInput={<IMaskInput mask={'00/00/0000'} />}
 					{...rest}
 				/>
 				{isError && <ErrorMessage name={name} render={() => <ErrorIcon />} />}
