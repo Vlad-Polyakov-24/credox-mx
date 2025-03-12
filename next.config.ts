@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
 		});
 		return config;
 	},
+	// output: 'export',
+	// distDir: 'dist',
 };
 
 export default nextConfig;
