@@ -11,7 +11,6 @@ import { useToast } from '@shared/hooks/useToast';
 import { useLocalStorage } from '@shared/hooks/useLocalStorage';
 import { FormikInput, MaskInput } from '@shared/ui/FormikInput';
 import { FormikCheckbox } from '@shared/ui/FormikCheckbox';
-import { Datepicker } from '@shared/ui/Datepicker';
 import { Button } from '@shared/ui/Button';
 import { OverlayLoader } from '@features/OverlayLoader';
 import { ConditionsModal, ConditionsModalTheme } from '@features/ConditionsModal';
@@ -19,7 +18,7 @@ import { userApi } from '@entities/User';
 import { localStorageVars } from '@shared/config/localStorage';
 import { contactsSchema } from '@shared/const/validationSchemas';
 import { initialValues, inputs } from '../../model/data/contactsForm.data';
-import { FormStatus, IContactForm } from '../../model/types/ContactsForm.types';
+import { FormStatus, type IContactForm } from '../../model/types/ContactsForm.types';
 import styles from './Form.module.scss';
 
 type FormProps = {
@@ -56,7 +55,7 @@ const Form = ({ className, setFormStatus }: FormProps) => {
 
 	const buildPayload = ({ contact_number, birthday, first_name, last_name, email  }: IContactForm) => ({
 		contact_number: cleanPhoneNumber(contact_number),
-		birthday: birthday ? birthday.toISOString() : '',
+		birthday,
 		first_name,
 		last_name,
 		email,
@@ -90,41 +89,41 @@ const Form = ({ className, setFormStatus }: FormProps) => {
 	return (
 		<>
 			<Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={contactsSchema}>
-				{({ setFieldValue, values }) => (
-					<FormikForm className={classNames(styles.form, {}, [className])}>
-						<div className={styles.form__inputs}>
-							{inputs.map(({ name, placeholder, type }) => (
-								type === 'date'
-									? <Datepicker
-										key={name}
-										name={name}
-										placeholder={placeholder}
-										date={values.birthday}
-										onChange={(date) => setFieldValue(name, date)}
-									/>
-									: <FormikInput key={name} name={name} placeholder={placeholder} type={type}/>
-							))}
-							<MaskInput name={'contact_number'} mask={'+52 (000) 000-0000'} placeholder={'+52 1 ___ ___ ____'} />
-						</div>
-						<div className={styles.form__checkboxes}>
-							<FormikCheckbox
-								name={'mailing'}
-								label={'Consiento estar al día de las últimas noticias y recibir ofertas especiales y descuentos por cualquier medio, incluidas las comunicaciones electrónicas o equivalentes de Credox.mx'}
-							/>
-							<FormikCheckbox
-								name={'conditions'}
-								label={
-									<>
-										Сonfirmo que he leído y acepto las <span className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.CONDITIONS)}>condiciones generales</span>, <span
-										className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.PRIVACY)}>política de privacidad</span> y <span
-										className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.COOKIE)}>política de cookies</span>.
-									</>
-								}
-							/>
-						</div>
-						<Button type={'submit'} text={'Continuar'} fluid shadow />
-					</FormikForm>
-				)}
+				<FormikForm className={classNames(styles.form, {}, [className])}>
+					<div className={styles.form__inputs}>
+						{inputs.map(({ name, placeholder, type }) => (
+							type === 'date'
+								? <MaskInput
+									key={name}
+									name={name}
+									placeholder={placeholder}
+									mask={Date}
+									min={new Date(1900, 0, 1)}
+									max={new Date(new Date().getFullYear(), 11, 31)}
+									autofix={'pad'}
+								/>
+								: <FormikInput key={name} name={name} placeholder={placeholder} type={type}/>
+						))}
+						<MaskInput name={'contact_number'} mask={'+52 (000) 000-0000'} placeholder={'+52 1 ___ ___ ____'} />
+					</div>
+					<div className={styles.form__checkboxes}>
+						<FormikCheckbox
+							name={'mailing'}
+							label={'Consiento estar al día de las últimas noticias y recibir ofertas especiales y descuentos por cualquier medio, incluidas las comunicaciones electrónicas o equivalentes de Credox.mx'}
+						/>
+						<FormikCheckbox
+							name={'conditions'}
+							label={
+								<>
+									Сonfirmo que he leído y acepto las <span className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.CONDITIONS)}>condiciones generales</span>, <span
+									className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.PRIVACY)}>política de privacidad</span> y <span
+									className={styles.form__link} onClick={(e) => handleOpenModal(e, ConditionsModalTheme.COOKIE)}>política de cookies</span>.
+								</>
+							}
+						/>
+					</div>
+					<Button type={'submit'} text={'Continuar'} fluid shadow />
+				</FormikForm>
 			</Formik>
 			{isLoading && <OverlayLoader />}
 			{isOpen && <ConditionsModal isOpen={isOpen} onClose={close} theme={modalTheme}/>}

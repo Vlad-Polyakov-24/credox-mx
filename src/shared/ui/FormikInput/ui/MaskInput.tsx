@@ -1,16 +1,14 @@
-import { IMaskInput } from 'react-imask';
+import { IMaskInput, type IMaskInputProps } from 'react-imask';
 import { ErrorMessage, useField } from 'formik';
 import { classNames } from '@shared/lib/classNames';
 import { ErrorIcon } from '@shared/ui/ErrorIcon';
 import styles from './FormikInput.module.scss';
 
-interface MaskInputProps {
+type MaskInputProps = {
 	className?: string;
 	name: string;
-	mask: string;
 	label?: string;
-	placeholder?: string;
-}
+} & IMaskInputProps<HTMLInputElement>;
 
 const MaskInput = (props: MaskInputProps) => {
 	const { className, label, name, ...rest } = props;

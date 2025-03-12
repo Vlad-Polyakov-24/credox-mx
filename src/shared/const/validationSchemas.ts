@@ -22,8 +22,9 @@ export const contactsSchema = yup.object().shape({
 		.required('El campo es obligatorio')
 		.max(24, 'El apellido debe tener menos de 24 caracteres'),
 	birthday: yup
-		.date()
-		.required('La fecha de nacimiento es obligatoria'),
+		.string()
+		.trim()
+		.required('El campo es obligatorio'),
 	email: yup
 		.string()
 		.trim()

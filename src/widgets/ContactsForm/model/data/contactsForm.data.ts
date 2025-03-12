@@ -1,7 +1,7 @@
 export const initialValues = {
 	first_name: '',
 	last_name: '',
-	birthday: null,
+	birthday: '',
 	email: '',
 	contact_number: '',
 	mailing: false,
@@ -19,7 +19,7 @@ export const inputs = [
 	},
 	{
 		name: 'birthday',
-		placeholder: 'DD/MM/YYYY',
+		placeholder: 'DD.MM.YYYY',
 		type: 'date',
 	},
 	{
