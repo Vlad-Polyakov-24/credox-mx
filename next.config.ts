@@ -18,8 +18,12 @@ const nextConfig: NextConfig = {
 		});
 		return config;
 	},
-	// output: 'export',
-	// distDir: 'dist',
+	output: 'export',
+	distDir: 'dist',
+	trailingSlash: true,
+	images: {
+		unoptimized: true,
+	}
 };
 
 export default nextConfig;
